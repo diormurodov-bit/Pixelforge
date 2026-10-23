@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PixelForge — Заявка на разработку</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <p class="brand">PixelForge</p>
+      <h1>Заявка на разработку</h1>
+      <p>Расскажите о своём проекте — мы свяжемся с вами.</p>
+    </header>
+
+    <div class="form-top">
+      <span>Форма заявки</span>
+      <button type="button" id="fillRandomBtn" class="random-btn">🎲 Заполнить рандомно</button>
+    </div>
+
+    <form id="applicationForm" novalidate>
+      <section class="form-section">
+        <h2>1. О заказчике</h2>
+        <div class="fields">
+          <div class="field">
+            <label for="firstName">Имя <b>*</b></label>
+            <input type="text" name="firstName" id="firstName" autocomplete="given-name">
+            <span class="error" id="firstNameError"></span>
+          </div>
+          <div class="field">
+            <label for="lastName">Фамилия <b>*</b></label>
+            <input type="text" name="lastName" id="lastName" autocomplete="family-name">
+            <span class="error" id="lastNameError"></span>
+          </div>
+          <div class="field">
+            <label for="email">Email <b>*</b></label>
+            <input type="email" name="email" id="email" autocomplete="email">
+            <span class="error" id="emailError"></span>
+          </div>
+          <div class="field">
+            <label for="phone">Телефон <b>*</b></label>
+            <input type="tel" name="phone" id="phone" placeholder="+998901234567" autocomplete="tel">
+            <span class="error" id="phoneError"></span>
+          </div>
+          <div class="field">
+            <label for="company">Компания</label>
+            <input type="text" name="company" id="company">
+            <span class="error" id="companyError"></span>
+          </div>
+          <div class="field">
+            <label for="position">Должность</label>
+            <input type="text" name="position" id="position">
+            <span class="error" id="positionError"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <h2>2. О проекте</h2>
+        <div class="fields">
+          <div class="field">
+            <label for="service">Услуга <b>*</b></label>
+            <select name="service" id="service">
+              <option value="">Выберите услугу</option>
+              <option>Лендинг</option>
+              <option>Корпоративный сайт</option>
+              <option>Интернет-магазин</option>
+              <option>Веб-приложение</option>
+              <option>Мобильное приложение</option>
+              <option>Дизайн (лого/брендинг)</option>
+            </select>
+            <span class="error" id="serviceError"></span>
+          </div>
+          <div class="field">
+            <label for="budget">Бюджет <b>*</b></label>
+            <select name="budget" id="budget">
+              <option value="">Выберите бюджет</option>
+              <option>до 1000$</option>
+              <option>1000-5000$</option>
+              <option>5000-10000$</option>
+              <option>10000-25000$</option>
+              <option>свыше 25000$</option>
+            </select>
+            <span class="error" id="budgetError"></span>
+          </div>
+          <div class="field">
+            <label for="deadline">Срок <b>*</b></label>
+            <select name="deadline" id="deadline">
+              <option value="">Выберите срок</option>
+              <option>до 2 недель</option>
+              <option>1 месяц</option>
+              <option>1-2 месяца</option>
+              <option>3+ месяцев</option>
+              <option>не срочно</option>
+            </select>
+            <span class="error" id="deadlineError"></span>
+          </div>
+          <div class="field">
+            <label for="launchDate">Дата запуска</label>
+            <input type="date" name="launchDate" id="launchDate">
+            <span class="error" id="launchDateError"></span>
+          </div>
+          <div class="field">
+            <label for="pagesCount">Количество страниц</label>
+            <input type="number" name="pagesCount" id="pagesCount" min="1" max="100" placeholder="Например, 8">
+            <span class="error" id="pagesCountError"></span>
+          </div>
+          <div class="field full">
+            <label for="description">Описание проекта <b>*</b></label>
+            <textarea name="description" id="description" rows="4" placeholder="Опишите, какой сайт или сервис вам нужен (минимум 30 символов)"></textarea>
+            <span class="error" id="descriptionError"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <h2>3. Прочее</h2>
+        <div class="fields">
+          <div class="field">
+            <label for="website">Существующий сайт</label>
+            <input type="url" name="website" id="website" placeholder="https://example.com">
+            <span class="error" id="websiteError"></span>
+          </div>
+          <div class="field">
+            <label for="source">Откуда узнали о нас <b>*</b></label>
+            <select name="source" id="source">
+              <option value="">Выберите вариант</option>
+              <option>Instagram</option>
+              <option>Telegram</option>
+              <option>Google</option>
+              <option>Рекомендация друзей</option>
+              <option>Другое</option>
+            </select>
+            <span class="error" id="sourceError"></span>
+          </div>
+          <div class="field">
+            <label for="contactMethod">Способ связи <b>*</b></label>
+            <select name="contactMethod" id="contactMethod">
+              <option value="">Выберите способ связи</option>
+              <option>Telegram</option>
+              <option>WhatsApp</option>
+              <option>Email</option>
+              <option>Телефон</option>
+            </select>
+            <span class="error" id="contactMethodError"></span>
+          </div>
+        </div>
+      </section>
+
+      <p id="formMessage" class="form-message" role="status"></p>
+      <button type="submit" class="submit-btn" id="submitBtn">Отправить заявку</button>
+      <p class="note">Поля со звёздочкой обязательны.</p>
+    </form>
+  </main>
+</body>
+</html>
