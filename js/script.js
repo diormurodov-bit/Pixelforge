@@ -1,5 +1,5 @@
 // Вставьте URL опубликованного Google Apps Script в эту переменную.
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxszKEPnI4bhB2KHiXkcDF7DdEDsw_JYYe9x0dWTU3iPuNo3uXGv_aaitqB1JJvpvqt/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxrz3UidHFQmvhgV2qpjcK-tdu60U6lJBMKW0WO7_bXX0uX9fQ3YAL1bBRJ2kTeDbrS/exec";
 
 const form = document.getElementById("applicationForm");
 const randomBtn = document.getElementById("fillRandomBtn");
